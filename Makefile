@@ -1,7 +1,8 @@
 CXX = g++
 CFLAGS = -g -Wall -std=c++11
 NOMAIN = 
-MAINOBJ = main.o
+PARTNUMBER = 2
+MAINOBJ = main$(PARTNUMBER).o
 TESTOBJ = test.o
 OBJS = $(MAINOBJ) $(NOMAIN)
 TESTOBJS = $(TESTOBJ) $(NOMAIN)
@@ -10,8 +11,8 @@ TESTOBJS = $(TESTOBJ) $(NOMAIN)
 a.out: $(OBJS)
 	$(CXX) $(CFLAGS) $(OBJS) -o $@
 
-$(MAINOBJ): main.cc
-	$(CXX) $(CFLAGS) -c main.cc -o $@
+$(MAINOBJ): main$(PARTNUMBER).cc
+	$(CXX) $(CFLAGS) -c main$(PARTNUMBER).cc -o $@
 
 
 test: $(TESTOBJS)

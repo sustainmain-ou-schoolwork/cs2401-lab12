@@ -16,6 +16,8 @@ int main() {
     cout << "\nBase 7: ";
     convert_to_base(num, 7);
     cout << '\n';
+    
+    return EXIT_SUCCESS;
 }
 
 
